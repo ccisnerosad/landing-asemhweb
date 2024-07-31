@@ -1,0 +1,80 @@
+[
+  {
+    "idd": "93623441-1b0c-45cc-9487-da7977d4e3e9",
+    "norma": "16949",
+    "title": "Sistema de gestión de la calidad del automovil",
+    "content": {
+      "parent": "\nLa norma IATF 16949 define los requisitos de calidad específicos para la industria automotriz, abarcando todas las etapas desde el diseño y la producción hasta el servicio postventa, con el objetivo de asegurar la conformidad y satisfacción del cliente. Esta norma incluye requisitos adicionales específicos de General Motors (GM), como el análisis de riesgos mediante el Proceso de Análisis de Modo y Efecto de Falla (PFMEA) y la gestión de características especiales conforme a la especificación GMW15049. Al implementar IATF 16949, las organizaciones buscan no solo cumplir con los estándares internacionales de calidad, sino también satisfacer los requisitos particulares de los fabricantes de automóviles, promoviendo una cultura de mejora continua, reducción de defectos y aumento de la eficiencia en toda la cadena de suministro automotriz.\n\n"
+    },
+    "header": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dba729-9e90-430e-bb33-b79e207b7264/90703b60-c72f-4407-8ee9-a7840fc13e2f/6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240731T212727Z&X-Amz-Expires=3600&X-Amz-Signature=f3121bd85f74abf5bdb472931e5f3d9402f2a7f81cee0048c260df57856df225&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "card": "No Card",
+    "fuente": "IATF",
+    "color_principal": "#8A629B",
+    "color_secundario": "#642F7B"
+  },
+  {
+    "idd": "1a69c120-fb8a-440f-8231-094854188ec7",
+    "norma": "56002",
+    "title": "Gestión de innovación",
+    "content": {
+      "parent": "\nLa norma ISO 56002 proporciona una guía para la gestión de la innovación en organizaciones de cualquier tamaño. Establece un sistema para gestionar tanto los riesgos como las oportunidades, asegurando que se capturen y compartan los conocimientos necesarios. La estrategia de innovación debe alinearse con la visión y objetivos de la organización, considerando las tendencias del mercado y siendo actualizada regularmente para mantener la ventaja competitiva. Esta norma fomenta un enfoque estructurado para la innovación, integrando prácticas que permitan a las organizaciones adaptarse y prosperar en un entorno cambiante.\n\n"
+    },
+    "header": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dba729-9e90-430e-bb33-b79e207b7264/58935cfa-b76c-4bfe-8b94-0c5d84b4c129/5.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240731T212727Z&X-Amz-Expires=3600&X-Amz-Signature=23af457168dcf3498b5674fff497cc70cb304be85ab9cde27dbc9fe0b5758b6a&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "card": "No Card",
+    "fuente": "ISO",
+    "color_principal": "#EF476F",
+    "color_secundario": "#9D1939"
+  },
+  {
+    "idd": "675002e0-634a-45e1-b235-490f252cd1e3",
+    "norma": "15189",
+    "title": "Laboratorios clínicos",
+    "content": {
+      "parent": "\nLa norma ISO 15189 establece un marco riguroso para asegurar la calidad en laboratorios clínicos, promoviendo la validez y fiabilidad de los resultados obtenidos. Exige la implementación de un sistema de gestión de calidad que debe incluir políticas y procedimientos claros para asegurar la consistencia y precisión en todas las actividades del laboratorio. Este sistema de gestión debe abordar la identificación y gestión de riesgos, así como la realización de auditorías internas periódicas para evaluar la conformidad con los requisitos de calidad y detectar oportunidades de mejora.\n\n\nAdemás, la norma requiere que los laboratorios validen los métodos de prueba y análisis para garantizar que sean adecuados y fiables, asegurando la exactitud y precisión de los resultados. La gestión eficiente de inventarios también es crucial, asegurando que todos los equipos y materiales sean adecuados y estén disponibles en condiciones óptimas. La norma también establece la necesidad de realizar revisiones periódicas de los procesos y procedimientos para impulsar la mejora continua del desempeño del laboratorio. De esta forma, ISO 15189 contribuye a la confianza en los resultados de los laboratorios clínicos, garantizando que cumplan con los más altos estándares de calidad y precisión en sus operaciones.\n\n"
+    },
+    "header": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dba729-9e90-430e-bb33-b79e207b7264/c5bd1623-2892-4d84-87c2-e181c183890d/4.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240731T212727Z&X-Amz-Expires=3600&X-Amz-Signature=66de80ac7d4ee1e2123c595444c7ab2277e419628498d4a21978026b82d281a9&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "card": "No Card",
+    "fuente": "ISO",
+    "color_principal": "#F78656",
+    "color_secundario": "#B44313"
+  },
+  {
+    "idd": "fec6d531-50bd-4450-a251-c6c673f5954e",
+    "norma": "13485",
+    "title": "Dispositivos médicos",
+    "content": {
+      "parent": "\nLa norma ISO 13485 establece un marco integral para garantizar la calidad en dispositivos médicos, asegurando que los productos cumplan con los requisitos regulatorios y las expectativas de los clientes. Esta norma exige la implementación de un sistema documentado para gestionar la calidad y la seguridad en todas las fases del ciclo de vida del producto, desde el diseño y desarrollo hasta la producción, distribución y servicio post-venta. La validación de procesos críticos es un componente esencial de la norma, asegurando que todos los procedimientos y procesos clave sean evaluados y aprobados para garantizar su efectividad y la seguridad del producto final. Además, ISO 13485 requiere que se implementen procedimientos rigurosos para la distribución y almacenamiento de dispositivos médicos, asegurando que estos mantengan su integridad y calidad durante el transporte y almacenamiento. La norma también establece la necesidad de acciones correctivas y preventivas para abordar y prevenir no conformidades, promoviendo una cultura de mejora continua y gestión proactiva de riesgos. De esta manera, ISO 13485 contribuye a la seguridad y la satisfacción del cliente al asegurar que los dispositivos médicos cumplan consistentemente con los estándares más altos de calidad y desempeño.\n\n"
+    },
+    "header": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dba729-9e90-430e-bb33-b79e207b7264/74f95fdb-6c0c-481a-97af-2f18fbc4ce58/3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240731T212727Z&X-Amz-Expires=3600&X-Amz-Signature=d989e8980fc6ee56cd6d3a981bba83beb14138198440c5f977bb6d63ebd26380&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "card": "No Card",
+    "fuente": "ISO",
+    "color_principal": "#D19C23",
+    "color_secundario": "#8B6612"
+  },
+  {
+    "idd": "0eb210e5-508d-4a5c-8d19-873c9ea765c8",
+    "norma": "9001",
+    "title": "Sistemas de gestión de la calidad",
+    "content": {
+      "parent": "\n## Principales características de las ISO 9001\n\n- **Enfoque en el cliente**: Las organizaciones deben entender y cumplir con las necesidades del cliente.\n- **Liderazgo**: Los líderes deben establecer una dirección clara y un ambiente interno que permita alcanzar los objetivos de calidad.\n- **Compromiso del personal**: Las competencias, la formación y el compromiso del personal son esenciales para la implementación efectiva del sistema de gestión de calidad.\n- **Enfoque basado en procesos**: La gestión de actividades y recursos como un proceso facilita el logro de resultados eficientes.\n- **Mejora continua**: La mejora continua del desempeño global es un objetivo permanente.\n- **Toma de decisiones basada en la evidencia**: Las decisiones deben basarse en el análisis de datos y la información.\n- **Gestión de las relaciones**: La organización debe gestionar sus relaciones con las partes interesadas para optimizar su impacto en el desempeño.\n\n\tEstas características ayudan a las organizaciones a mejorar la eficiencia y la satisfacción del cliente\n\n\n---\n\n\nLas organizaciones deben entender y cumplir con las necesidades del cliente, manteniendo un enfoque centrado en él. Los líderes deben establecer una dirección clara y crear un ambiente interno que permita alcanzar los objetivos de calidad. Las competencias, la formación y el compromiso del personal son esenciales para la implementación efectiva del sistema de gestión de calidad. La gestión de actividades y recursos como un proceso facilita el logro de resultados eficientes. La mejora continua del desempeño global es un objetivo permanente. Las decisiones deben basarse en el análisis de datos y la información, asegurando una toma de decisiones basada en la evidencia. Además, la organización debe gestionar sus relaciones con las partes interesadas para optimizar su impacto en el desempeño.\n\n"
+    },
+    "header": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dba729-9e90-430e-bb33-b79e207b7264/c98d5d5b-f8e9-47b4-b403-bd3f2cb145d1/2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240731T212727Z&X-Amz-Expires=3600&X-Amz-Signature=1eb214cfba759f989ca8f48dc3c13d402c0de7eb534f545accafb4c1a69315f8&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "card": "No Card",
+    "fuente": "ISO",
+    "color_principal": "#0471B6",
+    "color_secundario": "#01426B"
+  },
+  {
+    "idd": "df517b09-51bc-482f-8acf-af5af3563714",
+    "norma": "17025",
+    "title": "Requisitos para los laboratorios de ensayo y calibración",
+    "content": {
+      "parent": "\n## Principales características de ISO 17025\n\n- **Imparcialidad e independencia:** Garantiza que los laboratorios de ensayo y calibración operen de manera imparcial, evitando conflictos de interés.\n- **Competencia técnica:** Asegura que el personal del laboratorio esté debidamente calificado y que los equipos utilizados sean adecuados y mantenidos correctamente.\n- **Gestión de calidad:** Implementa un sistema de gestión de calidad que incluye procedimientos documentados y registros que demuestran la conformidad con los requisitos.\n- **Validez de los resultados:** Establece requisitos para la validación de métodos y la trazabilidad de las mediciones para asegurar la precisión y la confiabilidad de los resultados.\n- **Mejora continua:** Fomenta la revisión y mejora continua de los procedimientos y el sistema de gestión para mantener altos estándares de calidad.\n\n---\n\n\nLa norma garantiza que los laboratorios de ensayo y calibración operen de manera imparcial e independiente, evitando conflictos de interés. Asegura que el personal esté debidamente calificado y que los equipos utilizados sean adecuados y mantenidos correctamente, garantizando así la competencia técnica. Implementa un sistema de gestión de calidad que incluye procedimientos documentados y registros que demuestran la conformidad con los requisitos. Establece requisitos para la validación de métodos y la trazabilidad de las mediciones, asegurando la precisión y confiabilidad de los resultados. Además, fomenta la revisión y mejora continua de los procedimientos y del sistema de gestión para mantener altos estándares de calidad.\n\n\n![giphy.gif](https://media2.giphy.com/media/aDOJuoE0QCu0tK4MYD/giphy.gif?cid=7941fdc6quuf11jbpdfsk0orqjp71c0pfwjvfra25s88x2m6&ep=v1_gifs_search&rid=giphy.gif&ct=g)\n\n"
+    },
+    "header": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dba729-9e90-430e-bb33-b79e207b7264/c2e585a1-f059-4386-8057-340b7207d1da/1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240731T212727Z&X-Amz-Expires=3600&X-Amz-Signature=464f009f51053349dfe253cdfd2c4745129f92f70115a4965d07e6ee36bbeec5&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "card": "No Card",
+    "fuente": "ISO",
+    "color_principal": "#03B449",
+    "color_secundario": "#007D32"
+  }
+]

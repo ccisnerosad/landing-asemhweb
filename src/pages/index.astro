@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { marked } from 'marked';
+import * as fs from "fs";
+
+//leer json con los datos src\pages\normas\data\normas.json y return data
+const records = JSON.parse(
+  fs.readFileSync("src/pages/normas/data/normas.json", "utf-8")
+);
+
+//si no hay registros, se crea un registro con el mensaje no hay registros
+if (records.length === 0) {
+  records.push({
+    idd: 'no-records',
+    id: 'no-records',
+    title: 'No hay ',
+    content: {
+      parent: 'No hay Normas'
+    },
+    header:'No hay header',
+    caard:'No hay tarjeta',
+    contenido:'No hay contenido'
+  
+  });
+}
+// Convertir el contenido Markdown a HTML
+const convertedRecords = records.map((record: { content: { parent: string; }; }) => ({
+  ...record,
+  htmlContent: marked(record.content.parent)
+}));
+
+---
+<Layout title="Inicio">
+  <h1 class="text-4xl text-center p-20">Estandares</h1>
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-10 mr-10">
+    {convertedRecords.map((record: { norma: string | null | undefined; title: string; header: string; card: string; contenido: any; idd: string; color_principal:string; color_secundario:string; fuente:string }) => (
+      <a  href={`/normas/${record.norma}`} >
+      <article class="w-full h-80 flex flex-col" style={{backgroundColor: record.color_principal}} id={record.idd}>
+        <h2 class="text-4xl text-white text-center">
+          <div class="mt-auto mb-auto p-3 flex-1 flex items-center justify-center">
+            <div>
+            <p>{record.fuente}</p>
+            <b>{record.norma}</b>
+            </div>
+          </div>
+        </h2>
+        <img transition:name={record.norma} class="object-cover h-36" src={record.header} alt="card"/>
+        <div class="flex-1 flex items-center justify-center">
+          <p class="text-white text-center">
+            <b>{record.title}</b>
+          </p>
+        </div>
+      </article>
+      </a>
+    ))}
+    
+  </section>
+</Layout>

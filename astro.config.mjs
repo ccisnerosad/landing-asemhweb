@@ -7,4 +7,5 @@ export default defineConfig({
   output: "server",
   integrations: [tailwind()],
   adapter: node(),
+   base: "/landing", // Añade esta línea
 });

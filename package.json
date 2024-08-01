@@ -25,7 +25,8 @@
     "send": "^0.18.0",
     "server-destroy": "^1.0.1",
     "tailwindcss": "^3.4.7",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "jest": "^29.0.0"
   },
   "devDependencies": {
     "@notionhq/client": "^2.2.15"

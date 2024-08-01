@@ -6,6 +6,5 @@ import node from "@astrojs/node";
 export default defineConfig({
   output: "server",
   integrations: [tailwind()],
-  adapter: node(),
-  base: "/landing", // Añade esta línea
+  adapter: node({ mode: "standalone" }), // Asegúrate de agregar esta línea
 });

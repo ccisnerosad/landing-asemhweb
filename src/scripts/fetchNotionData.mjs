@@ -2,7 +2,7 @@ import { NotionToMarkdown } from "notion-to-md";
 import notion from "./notion.mjs";
 export const prerender = true;
 const n2m = new NotionToMarkdown({ notionClient: notion });
-
+// Database ID from Notion
 const databaseId = "bd470448a59d4fad9f97111ca8104a51";
 
 // Function to get database records and convert content to Markdown
@@ -41,6 +41,13 @@ export async function getDatabaseRecordsInMarkdown() {
           color_secundario:
             page.properties.color_secundario.rich_text[0]?.text?.content ||
             "No Color",
+          //inactive boolean
+          inactivo: page.properties.inactivo.checkbox || false,
+          //orden número
+          orden: page.properties.orden.number || 0,
+          //subtitulo texto
+          subtitulo:
+            page.properties.subtitulo.rich_text[0]?.text?.content || "",
         };
       })
     );

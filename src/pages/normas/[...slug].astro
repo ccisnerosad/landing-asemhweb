@@ -1,13 +1,13 @@
 ---
 // Importa el Layout y la función para obtener datos
-import Layout from '../../layouts/Layout.astro';
-//import { getDatabaseRecordsInMarkdown } from '../../scripts/fetchNotionData.mjs';
+import Layout from '../../layouts/Layout-in.astro';
 import { marked } from 'marked';
 import * as fs from "fs";
-//const reload = await getDatabaseRecordsInMarkdown();
+import { getDatabaseRecordsInMarkdown } from '../../scripts/fetchNotionData.mjs';
+const reload = await getDatabaseRecordsInMarkdown();
+
+
 //console.log(reload);
-
-
 
 //obstener la ruta de la página
 let { slug } = Astro.params;
@@ -15,7 +15,7 @@ slug==undefined ? slug="/normas" : slug.toString();
 
 //quitar /normas de la ruta
 slug = slug.replace('/normas', '');
-console.log(slug);
+//console.log(slug);
 
 //leer json con los datos src\pages\normas\data\normas.json y return data
 const records = JSON.parse(
@@ -25,18 +25,26 @@ const records = JSON.parse(
 //si no hay registros, se crea un registro con el mensaje no hay registros
 if (records.length === 0) {
   records.push({
+    idd: 'no-records',
     id: 'no-records',
     title: 'No hay ',
     content: {
       parent: 'No hay Normas'
     },
-    header:'No hay Normas'
+    header:'No hay Normas',
+    card:'No hay Normas',
+    fuente:'No hay Normas',
+    color_principal:'No hay Normas',
+    color_secundario:'No hay Normas',
+    inactivo:'No hay Normas',
+    orden:'No hay Normas',
+    subtitulo:'No hay Normas'
   });
 }
 //TODO Convertir el contenido Markdown a HTML
 
 //Encontrer el registro con norma que coincide con el slug
-const record = records.find((record: { norma: string | null | undefined; }) => record.norma === slug);
+const record = records.find((record: { norma: string; }) => record.norma === slug);
 
 // Convertir el contenido Markdown a HTML
 const convertedRecord = {
@@ -48,9 +56,16 @@ const convertedRecord = {
 
 ---
 <Layout title={record.title}>
-  <img transition:name={record.norma} class="w-full objet-cover" src={record.header} alt="header"/>
+  
+  <a href="/" class="ref">
+    <h1 id="sticky-parallax-header" transition:name={record.norma} class="text-4xl pt-11 pb-8 w-ful object-cover" style={{ backgroundImage: `url(${record.header})`, color: `${record.color_secundario}`}}>
+      <button id="btn-parallax" transition:name="header" transition:animate="slide" class="fixed top-80 left-3"><img src="/back.svg" style="" width="20%" alt=""></button>
+      <strong id="title-parallax" class="fixed top-80 left-20">{record.norma} {record.title} <br>{record.subtitulo}</strong>
+    </h1>
+  </a>
+  
+  </img>
   <article class="z-50 mr-20 ml-20">
-    <h1 class="text-4xl pt-11 pb-8" style={{color:record.color_secundario}}><strong>{record.title}</strong></h1>
     <div class="" set:html={convertedRecord.htmlContent}></div>
   </article>
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout-out.astro';
 import { marked } from 'marked';
 import * as fs from "fs";
 
@@ -17,12 +17,21 @@ if (records.length === 0) {
     content: {
       parent: 'No hay Normas'
     },
-    header:'No hay header',
-    caard:'No hay tarjeta',
-    contenido:'No hay contenido'
+    header:'No hay Normas',
+    card:'No hay Normas',
+    fuente:'No hay Normas',
+    color_principal:'No hay Normas',
+    color_secundario:'No hay Normas',
+    inactivo:'No hay Normas',
+    orden:'No hay Normas',
+    subtitulo:'No hay Normas'
   
   });
 }
+//Ordenar registros por orden y filtrar los inactivos false
+records.sort((a: { orden: number; }, b: { orden: number; }) => a.orden - b.orden);
+records.filter((record: { inactivo: boolean; }) => record.inactivo === false);
+
 // Convertir el contenido Markdown a HTML
 const convertedRecords = records.map((record: { content: { parent: string; }; }) => ({
   ...record,
@@ -31,11 +40,10 @@ const convertedRecords = records.map((record: { content: { parent: string; }; })
 
 ---
 <Layout title="Inicio">
-  <h1 class="text-4xl text-center p-20">Estandares</h1>
-  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-10 mr-10">
-    {convertedRecords.map((record: { norma: string ; title: string; header: string; card: string; contenido: any; idd: string; color_principal:string; color_secundario:string; fuente:string }) => (
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-10 mr-10 mt-24">
+    {convertedRecords.map((record: { norma: string ; title: string; header: string; card: string;  idd: string; color_principal:string; color_secundario:string; fuente:string; inactivo:boolean; }) => (
       <a  href={`/normas/${record.norma}`} >
-      <article class="w-full h-80 flex flex-col" style={{backgroundColor: record.color_principal}} id={record.idd}>
+      <article class="w-full h-80 flex flex-col rounded-md" style={{backgroundColor: record.color_principal}} id={record.idd}>
         <h2 class="text-4xl text-white text-center">
           <div class="mt-auto mb-auto p-3 flex-1 flex items-center justify-center">
             <div>

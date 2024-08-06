@@ -1,33 +1,10 @@
 ---
 import Layout from '../layouts/Layout-out.astro';
 import { marked } from 'marked';
-import * as fs from "fs";
+import normas from './normas/data/normas.json';
 
-//leer json con los datos src\pages\normas\data\normas.json y return data
-const records = JSON.parse(
-  fs.readFileSync("src/pages/normas/data/normas.json", "utf-8")
-);
+let records = normas;
 
-//si no hay registros, se crea un registro con el mensaje no hay registros
-if (records.length === 0) {
-  records.push({
-    idd: 'no-records',
-    id: 'no-records',
-    title: 'No hay ',
-    content: {
-      parent: 'No hay Normas'
-    },
-    header:'No hay Normas',
-    card:'No hay Normas',
-    fuente:'No hay Normas',
-    color_principal:'No hay Normas',
-    color_secundario:'No hay Normas',
-    inactivo:'No hay Normas',
-    orden:'No hay Normas',
-    subtitulo:'No hay Normas'
-  
-  });
-}
 //Ordenar registros por orden y filtrar los inactivos false
 records.sort((a: { orden: number; }, b: { orden: number; }) => a.orden - b.orden);
 records.filter((record: { inactivo: boolean; }) => record.inactivo === false);
@@ -40,8 +17,9 @@ const convertedRecords = records.map((record: { content: { parent: string; }; })
 
 ---
 <Layout title="Inicio">
-  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-10 mr-10 mt-24">
-    {convertedRecords.map((record: { norma: string ; title: string; header: string; card: string;  idd: string; color_principal:string; color_secundario:string; fuente:string; inactivo:boolean; }) => (
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-10 lg:ml-32 lg:mr-32 ml-16 mr-16 mt-24">
+    {records.map((record: { norma: string ; title: string; header: string; card: string;  idd: string; color_principal:string; color_secundario:string; fuente:string; inactivo:boolean; content: { parent: string; };}) => (
+      
       <a  href={`/normas/${record.norma}`} >
       <article class="w-full h-80 flex flex-col rounded-md" style={{backgroundColor: record.color_principal}} id={record.idd}>
         <h2 class="text-4xl text-white text-center">
@@ -52,7 +30,8 @@ const convertedRecords = records.map((record: { content: { parent: string; }; })
             </div>
           </div>
         </h2>
-        <img transition:name={record.norma} class="object-cover h-36" src={record.header} alt="card"/>
+        <div transition:name={record.norma} class="bg-origin-border bg-center hover:bg-origin-padding bg-cover h-36" style={{ backgroundImage: `url(/portadas/${record?.norma}.png)`, color: `${record?.color_secundario}`}}>
+        </div>
         <div class="flex-1 flex items-center justify-center">
           <p class="text-white text-center">
             <b>{record.title}</b>

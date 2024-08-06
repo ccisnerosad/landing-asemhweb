@@ -1,71 +1,68 @@
 ---
 // Importa el Layout y la función para obtener datos
-import Layout from '../../layouts/Layout-in.astro';
-import { marked } from 'marked';
-import * as fs from "fs";
 import { getDatabaseRecordsInMarkdown } from '../../scripts/fetchNotionData.mjs';
 const reload = await getDatabaseRecordsInMarkdown();
 
-
-//console.log(reload);
-
-//obstener la ruta de la página
-let { slug } = Astro.params;
-slug==undefined ? slug="/normas" : slug.toString();
-
-//quitar /normas de la ruta
-slug = slug.replace('/normas', '');
-//console.log(slug);
+import Layout from '../../layouts/Layout-in.astro';
+import { marked } from 'marked';
+import normas from './data/normas.json';
 
 //leer json con los datos src\pages\normas\data\normas.json y return data
-const records = JSON.parse(
-  fs.readFileSync("src/pages/normas/data/normas.json", "utf-8")
-);
+const records = normas ;
+//array {params: {slug: 'norma'}} map records
+let param = records.map((record: { norma: string; }) => ({ params: { slug: [record.norma] } }));
 
-//si no hay registros, se crea un registro con el mensaje no hay registros
-if (records.length === 0) {
-  records.push({
-    idd: 'no-records',
-    id: 'no-records',
-    title: 'No hay ',
-    content: {
-      parent: 'No hay Normas'
-    },
-    header:'No hay Normas',
-    card:'No hay Normas',
-    fuente:'No hay Normas',
-    color_principal:'No hay Normas',
-    color_secundario:'No hay Normas',
-    inactivo:'No hay Normas',
-    orden:'No hay Normas',
-    subtitulo:'No hay Normas'
-  });
-}
-//TODO Convertir el contenido Markdown a HTML
+export function getStaticPaths() {
+  return [
+  {params: {slug: '56003'}},
+  {params: {slug: '20000-1'}},
+  {params: {slug: '14001'}},
+  {params: {slug: '45001'}},
+  {params: {slug: '9001'}},
+  {params: {slug: '17020'}},
+  {params: {slug: '17025'}},
+  {params: {slug: '16949'}},
+  {params: {slug: '56002'}},
+  {params: {slug: '15189'}},
+  {params: {slug: '13485'}},
+  {params: {slug: '7101-2023'}},
+  ];
+}                             
+  
+//obstener la ruta de la página
+let { slug } = Astro.params;
+
+//quitar texto norma de la ruta
 
 //Encontrer el registro con norma que coincide con el slug
-const record = records.find((record: { norma: string; }) => record.norma === slug);
+const record = records.find((record: { norma: string;
+  content: { parent: string; };
+  header: string;
+  color_secundario: string;
+  title: string;
+  subtitulo: string;
+ }) => record.norma === slug);
 
 // Convertir el contenido Markdown a HTML
 const convertedRecord = {
   ...record,
-  htmlContent: marked(record.content.parent)
+  htmlContent: record ? marked(record.content.parent) : ''
 };
 
 //TODO: hacer que la imagn se stycky y que el texto se desplace arriba de la imagen
 
 ---
-<Layout title={record.title}>
+<Layout title={record?.title || 'AsemhWeb'}>
   
   <a href="/" class="ref">
-    <h1 id="sticky-parallax-header" transition:name={record.norma} class="text-4xl pt-11 pb-8 w-ful object-cover" style={{ backgroundImage: `url(${record.header})`, color: `${record.color_secundario}`}}>
-      <button id="btn-parallax" transition:name="header" transition:animate="slide" class="fixed top-80 left-3"><img src="/back.svg" style="" width="20%" alt=""></button>
-      <strong id="title-parallax" class="fixed top-80 left-20">{record.norma} {record.title} <br>{record.subtitulo}</strong>
+    <h1 id="sticky-parallax-header" transition:name={record?.norma} class="text-4xl pt-11 pb-8 bg-no-repeat  bg-cover leading-normal" style={{ backgroundImage: `url(/portadas/${record?.norma}.png)`, color: `${record?.color_secundario}`}}>
+      <button id="btn-parallax" transition:name="header" transition:animate="slide" class="fixed top-80 left-3"><img src="/back.svg" style="" width="20%" alt=""/>
+    </button>
+      <strong id="title-parallax" class="fixed top-80 left-20">{record?.norma} {record?.title}</strong>
     </h1>
   </a>
   
-  </img>
-  <article class="z-50 mr-20 ml-20">
+  <article class="z-50 mr-5 ml-5 md:mr-10 md:ml-10 lg:mr-20 lg:ml-20">
     <div class="" set:html={convertedRecord.htmlContent}></div>
   </article>
 </Layout>

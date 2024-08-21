@@ -1,5 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import Formulario from "../components/Formulario.astro";
+import BotonContacto from "../components/BotonContacto.astro";
 
 
 interface Props {
@@ -10,24 +12,41 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/landing/favicon.svg" />
+		<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/src/css/main.css">
+		<link rel="stylesheet" href="/landing/css/main.css">
+		<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>
 		<section class="mb-20">
+			<BotonContacto tr="hero"/>
 			<slot />
+
 		</section>
+		<div class="flex justify-center">
+			<Formulario/>
+		</div>
 
 	</body>
+	<footer>
+			
+		<script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[3]='ADDRESS';ftypes[3]='address';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+	</footer>
 </html>
+
+<style type="text/css">
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+		We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 <style is:global>
 	:root {
 		/* Colors hexadecimal en la gama de azul*/
@@ -74,6 +93,6 @@ const { title } = Astro.props;
 		color: var(--contrasted);
 		font-size: 1.5rem;
 	}
-	
+	#mc_embed_signup{background:#fff;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
 
 </style>

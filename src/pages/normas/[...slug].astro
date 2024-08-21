@@ -1,7 +1,7 @@
 ---
 // Importa el Layout y la función para obtener datos
-//import { getDatabaseRecordsInMarkdown } from '../../scripts/fetchNotionData.mjs';
-//const reload = await getDatabaseRecordsInMarkdown();
+// import { getDatabaseRecordsInMarkdown } from '../../scripts/fetchNotionData.mjs';
+// const reload = await getDatabaseRecordsInMarkdown();
 
 import Layout from '../../layouts/Layout-in.astro';
 import { marked } from 'marked';
@@ -25,7 +25,7 @@ export function getStaticPaths() {
   {params: {slug: '56002'}},
   {params: {slug: '15189'}},
   {params: {slug: '13485'}},
-  {params: {slug: '7101-2023'}},
+  {params: {slug: '7101'}},
   ];
 }                             
   
@@ -53,10 +53,9 @@ const convertedRecord = {
 
 ---
 <Layout title={record?.title || 'AsemhWeb'}>
-  
-  <a href="/" class="ref">
-    <h1 id="sticky-parallax-header" transition:name={record?.norma} class="text-4xl pt-11 pb-8 bg-no-repeat  bg-cover leading-normal" style={{ backgroundImage: `url(/portadas/${record?.norma}.png)`, color: `${record?.color_secundario}`}}>
-      <button id="btn-parallax" transition:name="header" transition:animate="slide" class="fixed top-80 left-3"><img src="/back.svg" style="" width="20%" alt=""/>
+  <a href="/landing/" class="ref">
+    <h1 id="sticky-parallax-header" transition:name={record?.norma} class="text-4xl pt-11 pb-8 bg-no-repeat  bg-cover leading-normal" style={{ backgroundImage: `url(/landing/portadas/${record?.norma}.png)`, color: `${record?.color_secundario}`}}>
+      <button id="btn-parallax" transition:name="header" transition:animate="slide" class="fixed top-80 left-3"><img src="/landing/back.svg" style="" width="20%" alt=""/>
     </button>
       <strong id="title-parallax" class="fixed top-80 left-20">{record?.norma} {record?.title}</strong>
     </h1>

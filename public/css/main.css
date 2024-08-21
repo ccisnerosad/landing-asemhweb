@@ -35,6 +35,8 @@ h3{
       }
 }
 
+
+
 #sticky-parallax-header {
 	position: fixed;
 	top: 0;
@@ -126,4 +128,5 @@ h3{
                   color: white;
             }
       }
+
 }

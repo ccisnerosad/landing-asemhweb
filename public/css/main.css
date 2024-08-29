@@ -11,31 +11,61 @@ h3{
       
 }
 
+#title-parallax{
+      line-height: 10vh;
+}
+
+
 @keyframes sticky-parallax-header-move-and-size {
 	from {
 		background-position: 50% 0;
 		height: 70vh;
-		font-size: calc(3vw + 0.5em);
+		font-size: calc(12vh);
 	}
 	to {
 		background-position: 50% 100%;
             color: white;
-		height: 10vh;
-		font-size: 2em;
+		height: 25vh;
+		font-size: calc(7vh);
 	}
 }
 
 @keyframes btn-fixed-parallax {
       from {
-            top:20rem;
+            top:15vh;
       }
       to {
-            top: 0.5em;
+            top: 4vh;
             color: white;
       }
 }
 
+/*cambio de background-color gama infinita  al scroll #contact-button*/
+@keyframes btn-fixed-parallax-color {
+      from {
+            background-color: #cf0000;
+      }
+      30% {
+            background-color: #fffb00;
+            color: black;
+      }
+      60% {
+            background-color: #00a108;
+            color :aliceblue;
+      }
+      90% {
+            background-color: #0000ff;
+      }
+      to {
+            background-color: #0000ff;
+      }
 
+}
+
+#contact-button{
+      animation: btn-fixed-parallax-color linear forwards;
+      animation-timeline: scroll();
+}
 
 #sticky-parallax-header {
 	position: fixed;
@@ -85,14 +115,12 @@ h3{
       font-weight: bold;
       padding-top: 1.8em;
 }
-
-
-
 /****************************************************
   responsive design animation
  ****************************************************/
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (max-width: 768px) {
+ /* Small devices (landscape phones, 992px and up) */
+@media screen and (max-width: 992px) {
+      /* Estilos para teléfonos grandes o tablets pequeñas */
       h2{
             font-size: 1.5em !important;
             font-weight: bold;
@@ -104,29 +132,175 @@ h3{
             padding-top: 1.3em;
             
       }
+      body {
+            padding-top: 60vh !important;
+      }
 
       @keyframes sticky-parallax-header-move-and-size {
             from {
                   background-position: 50% 0;
-                  height: 70vh;
-                  font-size: calc(3vw + 0.5em);
+                  height: 60vh;
+                  font-size: calc(11vh);
             }
             to {
                   background-position: 50% 100%;
                   color: white;
-                  height: 30vh;
-                  font-size: 2em;
+                  height: 23vh;
+                  font-size: calc(6vh);
             }
       }
 
       @keyframes btn-fixed-parallax {
             from {
-                  top:20rem;
+                  top:10vh;
             }
             to {
-                  top: 0.5em;
+                  top: 4vh;
                   color: white;
             }
       }
-
 }
+
+/****************************************************
+  responsive design animation
+ ****************************************************/
+/* Small devices (landscape phones, 768px and up) */
+@media screen and (max-width: 768px) {
+      /* Estilos para teléfonos grandes o tablets pequeñas */
+      h2{
+            font-size: 1.5em !important;
+            font-weight: bold;
+            padding-top: 1.5em;
+      }
+      h3{
+            font-size: 1.3em !important;
+            font-weight: bold;
+            padding-top: 1.3em;
+            
+      }
+      body {
+            padding-top: 50vh !important;
+      }
+
+      @keyframes sticky-parallax-header-move-and-size {
+            from {
+                  background-position: 50% 0;
+                  height: 50vh;
+                  font-size: calc(9vh);
+            }
+            to {
+                  background-position: 50% 100%;
+                  color: white;
+                  height: 20vh;
+                  font-size: calc(5.3vh);
+            }
+      }
+
+      @keyframes btn-fixed-parallax {
+            from {
+                  top:10vh;
+            }
+            to {
+                  top: 4vh;
+                  color: white;
+            }
+      }
+  }
+
+
+
+
+
+/****************************************************
+  responsive design animation
+ ****************************************************/
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 576px) {
+      h2{
+            font-size: 1.5em !important;
+            font-weight: bold;
+            padding-top: 1.5em;
+      }
+      h3{
+            font-size: 1.3em !important;
+            font-weight: bold;
+            padding-top: 1.3em;
+            
+      }
+      body {
+            padding-top: 70vh !important;
+      }
+
+      @keyframes sticky-parallax-header-move-and-size {
+            from {
+                  background-position: 50% 0;
+                  height: 70vh;
+                  font-size: calc(6.5vh);
+            }
+            to {
+                  background-position: 50% 100%;
+                  color: white;
+                  height: 30vh;
+                  font-size: calc(4vh);
+            }
+      }
+
+      @keyframes btn-fixed-parallax {
+            from {
+                  top:10vh;
+            }
+            to {
+                  top: 4vh;
+                  color: white;
+            }
+      }
+}
+
+/****************************************************
+  responsive design animation
+ ****************************************************/
+
+/* Small devices (landscape phones, 320px and up) */
+
+@media screen and (max-width: 320px) {
+      h2{
+            font-size: 1.5em !important;
+            font-weight: bold;
+            padding-top: 1.5em;
+      }
+      h3{
+            font-size: 1.3em !important;
+            font-weight: bold;
+            padding-top: 1.3em;
+            
+      }
+      body {
+            padding-top: 30vh !important;
+      }
+
+      @keyframes sticky-parallax-header-move-and-size {
+            from {
+                  background-position: 50% 0;
+                  height: 100vh;
+                  font-size: calc(5.5vh);
+            }
+            to {
+                  background-position: 50% 100%;
+                  color: white;
+                  height: 20vh;
+                  font-size: calc(4.5vh);
+            }
+      }
+
+      @keyframes btn-fixed-parallax {
+            from {
+                  top:10vh;
+            }
+            to {
+                  top: 4vh;
+                  color: white;
+            }
+      }
+}
+
+

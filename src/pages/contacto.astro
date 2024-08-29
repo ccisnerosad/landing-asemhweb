@@ -1,12 +1,9 @@
 ---
 import Formulario from '../components/Formulario.astro';
-import Layout from '../layouts/Layout-out.astro';
+import Layout from '../layouts/Layout-contacto.astro';
 ---
-<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 <Layout title='Contacto'>
-   <section  transition:name="hero" transition:animate="slide"
-    class="fixed bottom-2 right-1/4">
+      <div class="flex justify-center">
       <Formulario/>
-   </section>
+      </div>
 </Layout>

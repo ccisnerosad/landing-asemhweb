@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import BotonContacto from "../components/BotonContacto.astro";
+import Header from "../components/HeaderCont.astro";
 
 
 interface Props {
@@ -19,29 +19,18 @@ const { title } = Astro.props;
 		<meta property="og:image" content="/landing/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/landing/favicon.svg" />
-		<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/landing/css/main.css?v=3.4">
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<section class="mb-20">
-			<BotonContacto tr="boton"/>
 			<slot />
 		</section>
-		<div class="flex justify-center">
-			
-		</div>
 
 	</body>
-
 </html>
-
-<style type="text/css">
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-		We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
 <style is:global>
 	:root {
 		/* Colors hexadecimal en la gama de azul*/
@@ -88,6 +77,6 @@ const { title } = Astro.props;
 		color: var(--contrasted);
 		font-size: 1.5rem;
 	}
-	#mc_embed_signup{background:#fff;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
+	
 
 </style>
